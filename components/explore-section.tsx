@@ -30,15 +30,15 @@ const destinations = [
   {
     titleKey: "dest.lake.title",
     descKey: "dest.lake.desc",
-    image: "/images/big-almaty-lake.jpg",
+    image: "/images/big-almaty-lake1.jpg",
     alt: "Big Almaty Lake turquoise alpine lake",
     span: "",
   },
   {
-    titleKey: "dest.istoc.title",
-    descKey: "dest.istoc.desc",
-    image: "public/images/istoc.jpg",
-    alt: "Mausoleum of Khoja Ahmed Yasawi in Turkestan",
+    titleKey: "dest.turkestan.title",
+    descKey: "dest.turkestan.desc",
+    image: "/images/istoc.jpg",
+    alt: "spring",
     span: "",
   },
   {
@@ -99,9 +99,9 @@ const destinations = [
     span: "",
   },
   {
-    titleKey: "places.bigLake.title",
-    descKey: "places.bigLake.desc",
-    image: "/images/Большое Алматинское озеро.jpg",
+    titleKey: "places.fabric.title",
+    descKey: "places.fabric.desc",
+    image: "/images/fabric.jpg",
     alt: "Big Almaty Lake",
     span: "",
   },

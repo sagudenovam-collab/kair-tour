@@ -107,10 +107,10 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "A stunning turquoise alpine lake at 2,511 meters in the Tien Shan mountains.",
     ru: "Потрясающее бирюзовое горное озеро на высоте 2511 метров в горах Тянь-Шань.",
   },
-  "dest.turkestan.title": { en: "Turkestan", ru: "Туркестан" },
+  "dest.turkestan.title": { en: "Hot spring", ru: "Горячие источники" },
   "dest.turkestan.desc": {
-    en: "Ancient Silk Road city with the magnificent Mausoleum of Khoja Ahmed Yasawi.",
-    ru: "Древний город Шёлкового пути с величественным мавзолеем Ходжи Ахмеда Ясави.",
+    en: "A natural hot spring offering relaxing thermal waters and scenic surroundings, perfect for wellness and nature lovers.",
+    ru: "Природный горячий источник с целебной термальной водой и живописными окрестностями, идеально подходящий для отдыха и оздоровления."
   },
   "dest.nomad.title": {
     en: "Nomadic Heritage",
@@ -163,10 +163,10 @@ const translations: Record<string, Record<Lang, string>> = {
   ru: "Популярная смотровая гора с развлечениями и панорамным видом на Алматы",
 },
 
-"places.bigLake.title": { en: "Big Almaty Lake", ru: "Большое Алматинское озеро" },
-"places.bigLake.desc": {
-  en: "Tourist lake in the mountains, popular for walks and photo shoots",
-  ru: "Туристическое озеро в горах, популярное место для прогулок и фотосессий",
+"places.fabric.title": { en: "Chocolate Factory Rakhat", ru: "Шоколадная фабрика Рахат" },
+"places.fabric.desc": {
+  en: "A famous chocolate factory offering guided tours, chocolate tasting, and a chance to see the production process.",
+  ru: "Известная шоколадная фабрика с экскурсиями, дегустациями и возможностью увидеть процесс производства шоколада."
 },
 
 "places.kayindy.title": { en: "Lake Kaiyndy", ru: "Озеро Кайынды" },
@@ -207,10 +207,6 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Transport with guide, eco fees",
     ru: "Транспорт с гидом, экосборы",
   },
-  "tour1.price1": { en: "100,000 KZT (1–4 PAX)", ru: "100 000 KZT (1–4 чел.)"},
-  "tour1.price2": { en: "110,000 KZT (5 PAX)", ru: "110 000 KZT (5 чел.)"},
-  "tour1.price3": { en: "120,000 KZT (6 PAX)", ru: "120 000 KZT (6 чел.)"},
-  "tour1.price4": { en: "130,000 KZT (7 PAX)", ru: "120 000 KZT (7 чел.)"},
 
   // Tour 2 — Kolsai Easy
   "tour2.title": { en: "Kolsai Easy", ru: "Кольсай Лайт" },
@@ -223,10 +219,6 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Transport with guide, tickets, eco fees",
     ru: "Транспорт с гидом, билеты, экосборы",
   },
-  "tour2.price1": { en: "184,000 KZT ( 1-4 PAX )", ru: "174 000 KZT (1-4 чел.)",},
-  "tour2.price2": { en: "194,000 KZT ( 5 PAX )", ru: "174 000 KZT (5 чел.)",},
-  "tour2.price3": { en: "204,000 KZT ( 6 PAX )", ru: "174 000 KZT (6 чел.)",},
-  "tour2.price4": { en: "214,000 KZT ( 7 PAX)", ru: "174 000 KZT (7 чел.)",},
   
 
   // Tour 3 — Kolsai Full Express
@@ -243,16 +235,7 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Transport with guide, off-road car to Kaindy, horse rental, tickets, eco fees",
     ru: "Транспорт с гидом, внедорожник до Каинды, аренда лошадей, билеты, экосборы",
   },
-  "tour3.price1": {
-    en: "1 pax: 247,000 KZT",
-    ru: "1 чел.: 247 000 KZT",
-  },
-  "tour3.price2": { en: "2 pax: 253,000 KZT", ru: "2 чел.: 253 000 KZT" },
-  "tour3.price3": { en: "3 pax: 259,000 KZT", ru: "3 чел.: 259 000 KZT" },
-  "tour3.price4": { en: "4 pax: 265,000 KZT", ru: "4 чел.: 265 000 KZT" },
-  "tour3.price5": { en: "5 pax: 281,000 KZT", ru: "5 чел.: 281 000 KZT" },
-  "tour3.price6": { en: "6 pax: 297,000 KZT", ru: "6 чел.: 297 000 KZT" },
-  "tour3.price7": { en: "7 pax: 313,000 KZT", ru: "7 чел.: 313 000 KZT" },
+
 
   // Tour 4 — Shymbulak - Kok Tobe
   "tour4.title": { en: "Shymbulak - Kok Tobe", ru: "Шымбулак - Кок-Тобе" },
@@ -265,82 +248,48 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Transport with guide, cable car tickets, entrance tickets",
     ru: "Транспорт с гидом, билеты на канатную дорогу, входные билеты",
   },
-  "tour4.price1": {
-    en: "1 pax: 129,000 KZT",
-    ru: "1 чел.: 129 000 KZT",
-  },
-  "tour4.price2": { en: "2 pax: 142,000 KZT", ru: "2 чел.: 142 000 KZT" },
-  "tour4.price3": { en: "3 pax: 155,000 KZT", ru: "3 чел.: 155 000 KZT" },
-  "tour4.price4": { en: "4 pax: 168,000 KZT", ru: "4 чел.: 168 000 KZT" },
-  "tour4.price5": { en: "5 pax: 191,000 KZT", ru: "5 чел.: 191 000 KZT" },
-  "tour4.price6": { en: "6 pax: 204,000 KZT", ru: "6 чел.: 204 000 KZT" },
-  "tour4.price7": { en: "7 pax: 227,000 KZT", ru: "7 чел.: 227 000 KZT" },
 
   // Tour 5 — Nature Tours
   "tour5.title": { en: "Huns Village and Oi-Qaragai", ru: "Аул Гунны и Ой-Карагай" },
   "tour5.route": { en: "Almaty - Huns Ethno Village - Oi-Qaragai Ski Resort - Almaty", ru: "Алматы - Этно-аул Гунны - Ой-Карагай - Алматы" },
   "tour5.time": { en: "09:30 - 19:00", ru: "09:30 - 19:00" },
-  "tour5.included": { en: "Transportation with English guide. Huns tickets separately (22,000 KZT/person)", ru: "Транспорт с гидом. Билеты в Гунны отдельно (22 000 тенге/чел)" },
-  "tour5.p1": { en: "1 PAX: 128,000 KZT", ru: "1 чел: 128 000 KZT" },
-  "tour5.p2": { en: "2 PAX: 153,000 KZT", ru: "2 чел: 153 000 KZT" },
-  "tour5.p3": { en: "3 PAX: 178,000 KZT", ru: "3 чел: 178 000 KZT" },
-  "tour5.p4": { en: "4 PAX: 203,000 KZT", ru: "4 чел: 203 000 KZT" },
-  "tour5.p5": { en: "5 PAX: 238,000 KZT", ru: "5 чел: 238 000 KZT" },
-  "tour5.p6": { en: "6 PAX: 273,000 KZT", ru: "6 чел: 273 000 KZT" },
-  "tour5.p7": { en: "7 PAX: 308,000 KZT", ru: "7 чел: 308 000 KZT" },
+  
 
   "tour6.title": { en: "Big Almaty Lake and Springs", ru: "БАО и Источники" },
   "tour6.route": { en: "Almaty - Big Almaty lake - Almaarasan gorge - Thermal springs - Almaty", ru: "Алматы - БАО - Алма-Арасан - Термальные источники - Алматы" },
   "tour6.time": { en: "06:00 - 16:00", ru: "06:00 - 16:00" },
   "tour6.included": { en: "Transportation with English-speaking guide, SUV to lake, eco fees", ru: "Транспорт с гидом, внедорожник до озера, экосборы" },
-  "tour6.p1": { en: "1-4 PAX: 141,500 KZT", ru: "1-4 чел: 141 500 KZT" },
-  "tour6.p2": { en: "5 PAX: 151,500 KZT", ru: "5 чел: 151 500 KZT" },
-  "tour6.p3": { en: "6 PAX: 183,000 KZT", ru: "6 чел: 183 000 KZT" },
-  "tour6.p4": { en: "7 PAX: 203,000 KZT", ru: "7 чел: 203 000 KZT" },
+
 
   "tour7.title": { en: "Nomads City and Tamgaly Tas", ru: "Город Кочевников и Тамгалы-Тас" },
   "tour7.route": { en: "Almaty - Nomads Castle - Boat trip to Tamgaly Tas - Retro Cars - Almaty", ru: "Алматы - Замок Кочевников - Лодка до Тамгалы-Тас - Ретро авто - Алматы" },
   "tour7.time": { en: "08:00 - 19:00", ru: "08:00 - 19:00" },
   "tour7.included": { en: "Transportation with guide, boat, eco fees, tickets", ru: "Транспорт с гидом, лодка, экосборы, билеты" },
-  "tour7.p1": { en: "1 PAX: 146,500 KZT", ru: "1 чел: 146 500 KZT" },
-  "tour7.p2": { en: "2 PAX: 148,000 KZT", ru: "2 чел: 148 000 KZT" },
-  "tour7.p3": { en: "3 PAX: 149,500 KZT", ru: "3 чел: 149 500 KZT" },
-  "tour7.p4": { en: "4 PAX: 151,000 KZT", ru: "4 чел: 151 000 KZT" },
-  "tour7.p5": { en: "5 PAX: 177,500 KZT", ru: "5 чел: 177 500 KZT" },
-  "tour7.p6": { en: "6 PAX: 179,000 KZT", ru: "6 чел: 179 000 KZT" },
-  "tour7.p7": { en: "7 PAX: 200,500 KZT", ru: "7 чел: 200 500 KZT" },
+
 
   "tour8.title": { en: "Assy Plateau and Turgen", ru: "Плато Ассы и Тургень" },
   "tour8.route": { en: "Almaty - Assy plateau - Turgen gorge - Issyk lake - Almaty", ru: "Алматы - Плато Ассы - Тургень - Озеро Иссык - Алматы" },
   "tour8.time": { en: "07:00 - 19:00", ru: "07:00 - 19:00" },
   "tour8.included": { en: "Transportation with guide and eco fees", ru: "Транспорт с гидом и экосборы" },
-  "tour8.p1": { en: "1-4 PAX: 180,000 KZT", ru: "1-4 чел: 180 000 KZT" },
-  "tour8.p2": { en: "5 PAX: 190,000 KZT", ru: "5 чел: 190 000 KZT" },
-  "tour8.p3": { en: "6 PAX: 200,000 KZT", ru: "6 чел: 200 000 KZT" },
-  "tour8.p4": { en: "7 PAX: 210,000 KZT", ru: "7 чел: 210 000 KZT" },
+
 
   "tour9.title": { en: "Singing Dunes", ru: "Поющий бархан" },
   "tour9.route": { en: "Almaty - Basshy village - Singing Dunes - Almaty", ru: "Алматы - поселок Басши - Поющий бархан - Алматы" },
   "tour9.time": { en: "06:00 - 19:00", ru: "06:00 - 19:00" },
   "tour9.included": { en: "Transportation with guide, SUV to dunes, eco fees", ru: "Транспорт с гидом, внедорожник, экосборы" },
-  "tour9.p1": { en: "1-4 PAX: 250,000 KZT", ru: "1-4 чел: 250 000 KZT" },
-  "tour9.p2": { en: "5-6 PAX: 300,000 KZT", ru: "5-6 чел: 300 000 KZT" },
+
 
   "tour10.title": { en: "Aktau and Katutau Mountains", ru: "Горы Актау и Катутау" },
   "tour10.route": { en: "Almaty - Basshy village - Aktau and Katutau mountains - Almaty", ru: "Алматы - Басши - горы Актау и Катутау - Алматы" },
   "tour10.time": { en: "06:00 - 19:00", ru: "06:00 - 19:00" },
   "tour10.included": { en: "Transportation with guide, SUV to mountains, eco fees", ru: "Транспорт с гидом, внедорожник, экосборы" },
-  "tour10.p1": { en: "1-4 PAX: 250,000 KZT", ru: "1-4 чел: 250 000 KZT" },
-  "tour10.p2": { en: "5-6 PAX: 300,000 KZT", ru: "5-6 чел: 300 000 KZT" },
+
 
   "tour11.title": { en: "Issyk Lake and Waterfall", ru: "Озеро Иссык и Водопад" },
   "tour11.route": { en: "Almaty - Issyk lake - Turgen gorge - bear waterfall - Almaty", ru: "Алматы - Озеро Иссык - Тургень - Медвежий водопад - Алматы" },
   "tour11.time": { en: "09:00 - 19:00", ru: "09:00 - 19:00" },
   "tour11.included": { en: "Transportation with guide and eco fees", ru: "Транспорт с гидом и экосборы" },
-  "tour11.p1": { en: "1-4 PAX: 140,000 KZT", ru: "1-4 чел: 140 000 KZT" },
-  "tour11.p2": { en: "5 PAX: 150,000 KZT", ru: "5 чел: 150 000 KZT" },
-  "tour11.p3": { en: "6 PAX: 160,000 KZT", ru: "6 чел: 160 000 KZT" },
-  "tour11.p4": { en: "7 PAX: 170,000 KZT", ru: "7 чел: 170 000 KZT" },
+
   
 // --- TWO-DAY TOURS ---
   "tours.twoday.label": { en: "Weekend Expeditions", ru: "Двухдневные экспедиции" },
@@ -356,13 +305,7 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Transport with English guide, SUV, Eco fees, Guesthouse, 3 meals included", 
     ru: "Транспорт с гидом, внедорожник, экосборы, гостевой дом, 3-разовое питание" 
   },
-  "tour12.p1": { en: "1 PAX: 350,000 KZT", ru: "1 чел: 350 000 KZT" },
-  "tour12.p2": { en: "2 PAX: 375,000 KZT", ru: "2 чел: 375 000 KZT" },
-  "tour12.p3": { en: "3 PAX: 400,000 KZT", ru: "3 чел: 400 000 KZT" },
-  "tour12.p4": { en: "4 PAX: 430,000 KZT", ru: "4 чел: 430 000 KZT" },
-  "tour12.p5": { en: "5 PAX: 460,000 KZT", ru: "5 чел: 460 000 KZT" },
-  "tour12.p6": { en: "6 PAX: 490,000 KZT", ru: "6 чел: 490 000 KZT" },
-  "tour12.p7": { en: "7 PAX: 520,000 KZT", ru: "7 чел: 520 000 KZT" },
+
 
   // Kolsai Full 2 (2 Days)
   "tour13.title": { en: 'Two-day tour "Kolsai Full 2"', ru: 'Двухдневный тур "Кольсай Фулл 2"' },
@@ -375,13 +318,7 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "English guide, SUV to Kaindy, Horse rental, Tickets, Guesthouse with breakfast", 
     ru: "Англоговорящий гид, внедорожник, аренда лошадей, билеты, гостевой дом с завтраком" 
   },
-  "tour13.p1": { en: "1 PAX: 269,000 KZT", ru: "1 чел: 269 000 KZT" },
-  "tour13.p2": { en: "2 PAX: 287,000 KZT", ru: "2 чел: 287 000 KZT" },
-  "tour13.p3": { en: "3 PAX: 305,000 KZT", ru: "3 чел: 305 000 KZT" },
-  "tour13.p4": { en: "4 PAX: 323,000 KZT", ru: "4 чел: 323 000 KZT" },
-  "tour13.p5": { en: "5 PAX: 351,000 KZT", ru: "5 чел: 351 000 KZT" },
-  "tour13.p6": { en: "6 PAX: 379,000 KZT", ru: "6 чел: 379 000 KZT" },
-  "tour13.p7": { en: "7 PAX: 410,000 KZT", ru: "7 чел: 410 000 KZT" },
+
   
 
   // Tour 6 — Multi-day Packages
@@ -421,14 +358,6 @@ const translations: Record<string, Record<Lang, string>> = {
   ru: "Транспорт с англоговорящим гидом, внедорожник до озера Каинды, аренда лошадей, билеты и экосборы, проживание в гостевом доме с завтраком, билеты на канатную дорогу в Шымбулаке",
 },
 
-"tour6.pkg1.price1": { en: "1 person – 424,000 KZT", ru: "1 человек – 424 000 KZT" },
-"tour6.pkg1.price2": { en: "2 persons – 452,000 KZT", ru: "2 человека – 452 000 KZT" },
-"tour6.pkg1.price3": { en: "3 persons – 480,000 KZT", ru: "3 человека – 480 000 KZT" },
-"tour6.pkg1.price4": { en: "4 persons – 508,000 KZT", ru: "4 человека – 508 000 KZT" },
-"tour6.pkg1.price5": { en: "5 persons – 556,000 KZT", ru: "5 человек – 556 000 KZT" },
-"tour6.pkg1.price6": { en: "6 persons – 604,000 KZT", ru: "6 человек – 604 000 KZT" },
-"tour6.pkg1.price7": { en: "7 persons – 655,000 KZT", ru: "7 человек – 655 000 KZT" },
-
 // ===== PACKAGE 2 =====
 // ================= PACKAGE 2 =================
 
@@ -461,13 +390,6 @@ const translations: Record<string, Record<Lang, string>> = {
   ru: "Транспорт с англоговорящим гидом, внедорожник до Каинды, аренда лошадей, билеты и экосборы, билеты на канатную дорогу в Шымбулаке, входные билеты на Кок-Тобе",
 },
 
-"tour6.pkg2.price1": { en: "1 person – 506,000 KZT", ru: "1 человек – 506 000 KZT" },
-"tour6.pkg2.price2": { en: "2 persons – 525,000 KZT", ru: "2 человека – 525 000 KZT" },
-"tour6.pkg2.price3": { en: "3 persons – 544,000 KZT", ru: "3 человека – 544 000 KZT" },
-"tour6.pkg2.price4": { en: "4 persons – 563,000 KZT", ru: "4 человека – 563 000 KZT" },
-"tour6.pkg2.price5": { en: "5 persons – 612,000 KZT", ru: "5 человек – 612 000 KZT" },
-"tour6.pkg2.price6": { en: "6 persons – 651,000 KZT", ru: "6 человек – 651 000 KZT" },
-"tour6.pkg2.price7": { en: "7 persons – 700,000 KZT", ru: "7 человек – 700 000 KZT" },
 
 // ================= PACKAGE 3 =================
 
@@ -500,13 +422,6 @@ const translations: Record<string, Record<Lang, string>> = {
   ru: "Транспорт с англоговорящим гидом, внедорожник до Каинды, аренда лошадей, билеты и экосборы, проживание в гостевом доме, билеты на канатную дорогу в Шымбулаке, входные билеты на Кок-Тобе",
 },
 
-"tour6.pkg3.price1": { en: "1 person – 528,000 KZT", ru: "1 человек – 528 000 KZT" },
-"tour6.pkg3.price2": { en: "2 persons – 559,000 KZT", ru: "2 человека – 559 000 KZT" },
-"tour6.pkg3.price3": { en: "3 persons – 590,000 KZT", ru: "3 человека – 590 000 KZT" },
-"tour6.pkg3.price4": { en: "4 persons – 621,000 KZT", ru: "4 человека – 621 000 KZT" },
-"tour6.pkg3.price5": { en: "5 persons – 682,000 KZT", ru: "5 человек – 682 000 KZT" },
-"tour6.pkg3.price6": { en: "6 persons – 733,000 KZT", ru: "6 человек – 733 000 KZT" },
-"tour6.pkg3.price7": { en: "7 persons – 797,000 KZT", ru: "7 человек – 797 000 KZT" },
 
 // ================= PACKAGE 4 =================
 
@@ -539,13 +454,6 @@ const translations: Record<string, Record<Lang, string>> = {
   ru: "Транспорт с англоговорящим гидом, билеты и экосборы, билеты на канатную дорогу в Шымбулаке, входные билеты на Кок-Тобе",
 },
 
-"tour6.pkg4.price1": { en: "1 person – 443,000 KZT", ru: "1 человек – 443 000 KZT" },
-"tour6.pkg4.price2": { en: "2 persons – 456,000 KZT", ru: "2 человека – 456 000 KZT" },
-"tour6.pkg4.price3": { en: "3 persons – 469,000 KZT", ru: "3 человека – 469 000 KZT" },
-"tour6.pkg4.price4": { en: "4 persons – 482,000 KZT", ru: "4 человека – 482 000 KZT" },
-"tour6.pkg4.price5": { en: "5 persons – 525,000 KZT", ru: "5 человек – 525 000 KZT" },
-"tour6.pkg4.price6": { en: "6 persons – 558,000 KZT", ru: "6 человек – 558 000 KZT" },
-"tour6.pkg4.price7": { en: "7 persons – 601,000 KZT", ru: "7 человек – 601 000 KZT" },
 
   // Contact
   "contact.label": { en: "Contact Us", ru: "Связаться с нами" },

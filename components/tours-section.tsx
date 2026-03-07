@@ -14,14 +14,12 @@ function TourCardTiered({
   routeKey,
   timeKey,
   includedKey,
-  priceKeys,
 }: {
   image: string
   titleKey: string
   routeKey: string
   timeKey: string
   includedKey: string
-  priceKeys: string[]
 }) {
   const { t } = useLanguage()
   return (
@@ -68,11 +66,6 @@ function TourCardTiered({
             <Banknote className="h-4 w-4 shrink-0 text-primary" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{t("tours.price")}</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 mb-5 min-h-[90px]">
-            {priceKeys.map((pk) => (
-              <span key={pk} className="text-[12px] text-white/80">{t(pk)}</span>
-            ))}
-          </div>
           <a
             href="https://wa.me/77077579993"
             target="_blank"
@@ -99,7 +92,7 @@ function TourCardTiered({
 /* ------------------------------------------------------------------ */
 /* 2. Карточка Multi-Day (Пакеты)                                     */
 /* ------------------------------------------------------------------ */
-function TourCardMultiDay({ image, title, duration, days, included, prices }: any) {
+function TourCardMultiDay({ image, title, duration, days, included}: any) {
   const { t } = useLanguage()
   return (
     <div className="shrink-0 w-[320px] md:w-[400px] snap-start group flex flex-col overflow-hidden border border-white/5 bg-navy-deep backdrop-blur-md transition-all duration-500 hover:border-primary/40 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
@@ -132,13 +125,7 @@ function TourCardMultiDay({ image, title, duration, days, included, prices }: an
 
         <div className="mt-auto">
           {/* Сетка цен */}
-          <div className="border-t border-white/10 pt-4 mb-4 min-h-[160px]">
-            <div className="grid grid-cols-1 gap-1">
-                {prices.map((p: string, i: number) => (
-                    <span key={i} className="text-[12px] text-white/80">{p}</span>
-                ))}
-            </div>
-          </div>
+        
           <a
   href="https://wa.me/77077579993"
   target="_blank"
@@ -208,8 +195,7 @@ const handleScroll = () => {
             titleKey="tour1.title" 
             routeKey="tour1.route" 
             timeKey="tour1.time" 
-            includedKey="tour1.included" 
-            priceKeys={["tour1.price1","tour1.price2","tour1.price3","tour1.price4"]} 
+            includedKey="tour1.included"
           />
           <TourCardTiered 
             image="images/Kolsai Easy.jpeg" 
@@ -217,17 +203,16 @@ const handleScroll = () => {
             routeKey="tour2.route" 
             timeKey="tour2.time" 
             includedKey="tour2.included" 
-            priceKeys={["tour2.price1","tour2.price2","tour2.price3","tour2.price4"]} 
           />
-          <TourCardTiered image="/images/kol.jpeg" titleKey="tour3.title" routeKey="tour3.route" timeKey="tour3.time" includedKey="tour3.included" priceKeys={["tour3.price1","tour3.price2","tour3.price3","tour3.price4","tour3.price5","tour3.price6","tour3.price7"]} />
-          <TourCardTiered image="/images/shym.jpeg" titleKey="tour4.title" routeKey="tour4.route" timeKey="tour4.time" includedKey="tour4.included" priceKeys={["tour4.price1","tour4.price2","tour4.price3","tour4.price4","tour4.price5","tour4.price6","tour4.price7"]} />
-          <TourCardTiered image="/images/Oi-Qaragai.jpg" titleKey="tour5.title" routeKey="tour5.route" timeKey="tour5.time" includedKey="tour5.included" priceKeys={["tour5.p1","tour5.p2","tour5.p3","tour5.p4","tour5.p5","tour5.p6","tour5.p7"]} />
-          <TourCardTiered image="/images/BAO.jpeg" titleKey="tour6.title" routeKey="tour6.route" timeKey="tour6.time" includedKey="tour6.included" priceKeys={["tour6.p1","tour6.p2","tour6.p3","tour6.p4"]} />
-          <TourCardTiered image="/images/nomad.png" titleKey="tour7.title" routeKey="tour7.route" timeKey="tour7.time" includedKey="tour7.included" priceKeys={["tour7.p1","tour7.p2","tour7.p3","tour7.p4","tour7.p5","tour7.p6","tour7.p7"]} />
-          <TourCardTiered image="/images/pla.jpg" titleKey="tour8.title" routeKey="tour8.route" timeKey="tour8.time" includedKey="tour8.included" priceKeys={["tour8.p1","tour8.p2","tour8.p3","tour8.p4"]} />
-          <TourCardTiered image="/images/singing-dunes.jpg" titleKey="tour9.title" routeKey="tour9.route" timeKey="tour9.time" includedKey="tour9.included" priceKeys={["tour9.p1","tour9.p2"]} />
-          <TourCardTiered image="/images/aktau.jpeg" titleKey="tour10.title" routeKey="tour10.route" timeKey="tour10.time" includedKey="tour10.included" priceKeys={["tour10.p1","tour10.p2"]} />
-          <TourCardTiered image="/images/issyk-bear.jpg" titleKey="tour11.title" routeKey="tour11.route" timeKey="tour11.time" includedKey="tour11.included" priceKeys={["tour11.p1","tour11.p2","tour11.p3","tour11.p4"]} />
+          <TourCardTiered image="/images/kol.jpeg" titleKey="tour3.title" routeKey="tour3.route" timeKey="tour3.time" includedKey="tour3.included" />
+          <TourCardTiered image="/images/shym.jpeg" titleKey="tour4.title" routeKey="tour4.route" timeKey="tour4.time" includedKey="tour4.included"/>
+          <TourCardTiered image="/images/Oi-Qaragai.jpg" titleKey="tour5.title" routeKey="tour5.route" timeKey="tour5.time" includedKey="tour5.included"  />
+          <TourCardTiered image="/images/BAO.jpeg" titleKey="tour6.title" routeKey="tour6.route" timeKey="tour6.time" includedKey="tour6.included"/>
+          <TourCardTiered image="/images/nomad.png" titleKey="tour7.title" routeKey="tour7.route" timeKey="tour7.time" includedKey="tour7.included" />
+          <TourCardTiered image="/images/pla.jpg" titleKey="tour8.title" routeKey="tour8.route" timeKey="tour8.time" includedKey="tour8.included" />
+          <TourCardTiered image="/images/singing-dunes.jpg" titleKey="tour9.title" routeKey="tour9.route" timeKey="tour9.time" includedKey="tour9.included" />
+          <TourCardTiered image="/images/aktau.jpeg" titleKey="tour10.title" routeKey="tour10.route" timeKey="tour10.time" includedKey="tour10.included" />
+          <TourCardTiered image="/images/issyk-bear.jpg" titleKey="tour11.title" routeKey="tour11.route" timeKey="tour11.time" includedKey="tour11.included" />
         </div>
 
         {/* 2. СЕКЦИЯ: ДВУХДНЕВНЫЕ ТУРЫ */}
@@ -239,8 +224,7 @@ const handleScroll = () => {
               titleKey="tour12.title" 
               routeKey="tour12.route" 
               timeKey="tour12.time" 
-              includedKey="tour12.included" 
-              priceKeys={["tour12.p1","tour12.p2","tour12.p3","tour12.p4","tour12.p5","tour12.p6","tour12.p7"]} 
+              includedKey="tour12.included"  
             />
             <TourCardTiered 
               image="/images/kolsai-2d.jpg" 
@@ -248,7 +232,6 @@ const handleScroll = () => {
               routeKey="tour13.route" 
               timeKey="tour13.time" 
               includedKey="tour13.included" 
-              priceKeys={["tour13.p1","tour13.p2","tour13.p3","tour13.p4","tour13.p5","tour13.p6","tour13.p7"]} 
             />
           </div>
         </div>

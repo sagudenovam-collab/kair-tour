@@ -51,7 +51,7 @@ export function Navbar() {
             <a
               key={link.key}
               href={link.href}
-              className="group relative text-[13px] font-medium uppercase tracking-[0.2em] text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.6)] transition-colors duration-300 hover:text-primary"
+              className="group relative text-[13px] font-medium uppercase tracking-[0.2em] text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.6)] transition-colors duration-300 hover:text-primary"
             >
               {t(link.key)}
               <span className="absolute -bottom-1.5 left-0 h-[2px] w-0 bg-primary transition-all duration-500 group-hover:w-full" />
