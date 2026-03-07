@@ -4,38 +4,39 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ScrollToTop from './ScrollToTop'
 
-const _inter = Inter({
+const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-inter',
+  display: 'swap',
 })
 
-const _playfair = Playfair_Display({
+const playfair = Playfair_Display({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-playfair',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'KairTravelAlmaty — Discover Kazakhstan',
   description:
     'Premium adventure travel across Kazakhstan. Explore mountains, canyons, lakes and nomadic culture with KairTravelAlmaty LLP.',
-  // Убрали generator: 'v0.app', чтобы не было лишних упоминаний ИИ
   icons: {
-    icon: [
-      {
-        // Используем ваш основной логотип как иконку сайта
-        url: '/images/logo-icon.png',
-        href: '/images/logo-icon.png',
-      }
-    ],
+    icon: '/images/logo-icon.png',
     apple: '/images/logo-icon.png',
+  },
+  openGraph: {
+    title: 'KairTravelAlmaty — Discover Kazakhstan',
+    description: 'Premium adventure travel across Kazakhstan.',
+    images: ['/images/nomad-culture.jpg'], 
+    type: 'website',
   },
 }
 
 export const viewport: Viewport = {
-  // Изменили цвет панели браузера на светло-голубой (под ваш новый дизайн)
   themeColor: '#e0f2fe', 
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 5, 
 }
 
 export default function RootLayout({
@@ -44,10 +45,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${_inter.variable} ${_playfair.variable} font-sans antialiased`}>
+    <html lang="ru" suppressHydrationWarning>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white text-slate-900`}>
         <ScrollToTop />
-        {children}
+        <main className="relative overflow-x-hidden min-h-screen">
+          {children}
+        </main>
         <Analytics />
       </body>
     </html>

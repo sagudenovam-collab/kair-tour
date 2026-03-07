@@ -48,7 +48,6 @@ const destinations = [
     alt: "Traditional Kazakh yurt on the steppe",
     span: "md:col-span-2",
   },
-  //kj
   {
     titleKey: "places.ayusay.title",
     descKey: "places.ayusay.desc",
@@ -127,67 +126,57 @@ export function ExploreSection() {
 
   return (
     <section
-  id="explore"
-  className="relative overflow-hidden border-t border-primary/10 py-28 lg:py-40"
-  style={{
-    background:
-      "linear-gradient(180deg, oklch(94% 0.04 235) 0%, oklch(90% 0.05 240) 50%, oklch(94% 0.04 235) 100%)",
-  }}
->
-      {/* Ambient glow */}
-      <div className="pointer-events-none absolute right-0 top-1/3 h-[500px] w-[500px] translate-x-1/2 rounded-full bg-primary/3 blur-3xl" />
-
+      id="explore"
+      className="relative overflow-hidden border-t border-primary/10 py-20 lg:py-40 bg-white"
+    >
       <div
         ref={sectionRef}
-        className="fade-in-section relative z-10 mx-auto max-w-7xl px-6 lg:px-8"
+        className="fade-in-section relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         {/* Header */}
-        <div className="mb-20 max-w-2xl">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-primary">
+        <div className="mb-12 md:mb-20 max-w-2xl text-left">
+          <span className="text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.4em] text-primary">
             {t("explore.label")}
           </span>
-          <h2 className="mt-5 font-serif text-3xl font-bold leading-[1.15] text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold leading-tight text-slate-900 md:text-5xl">
             {t("explore.title")}
           </h2>
-          <p className="mt-7 text-base leading-[1.8] text-foreground/55">
+          <p className="mt-6 text-sm md:text-base leading-relaxed text-slate-500">
             {t("explore.description")}
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid gap-4 md:grid-cols-4 md:auto-rows-[260px]">
+        {/* Grid - Исправлено для телефона */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:auto-rows-[260px] gap-4">
           {destinations.map((dest) => (
             <div
               key={dest.titleKey}
-              className={`stagger-child group relative cursor-pointer overflow-hidden ${dest.span}`}
+              className={`group relative cursor-pointer overflow-hidden rounded-xl h-[300px] md:h-auto ${dest.span}`}
             >
-              {/* Image with zoom on hover */}
               <Image
                 src={dest.image}
                 alt={dest.alt}
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
 
-              {/* Dark navy overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 transition-opacity group-hover:opacity-40" />
-
-              {/* Blue accent line at top */}
-              <div className="absolute top-0 left-0 h-[2px] w-0 bg-primary transition-all duration-500 group-hover:w-full" />
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <div className="flex items-end justify-between">
-                  <div className="h-16">
-                    <h3 className="font-serif text-lg font-bold text-white md:text-xl">
+              <div className="absolute inset-0 flex flex-col justify-end p-5">
+                <div className="flex items-end justify-between gap-2">
+                  <div className="flex-1">
+                    <h3 className="font-serif text-lg font-bold text-white">
                       {t(dest.titleKey)}
                     </h3>
-                    <p className="mt-2 max-w-xs text-xs leading-relaxed text-white/80 opacity-0 transition-all duration-500 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0">
+                    {/* На мобильных описание показываем сразу или по тапу, на ПК по ховеру */}
+                    <p className="mt-2 text-xs text-white/80 line-clamp-2 md:opacity-0 md:translate-y-3 transition-all duration-500 md:group-hover:opacity-100 md:group-hover:translate-y-0">
                       {t(dest.descKey)}
                     </p>
                   </div>
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-foreground/15 text-foreground/50 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:border-primary group-hover:text-primary group-hover:shadow-[0_0_16px_oklch(0.72_0.08_235/0.2)]">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center border border-white/30 text-white rounded-full md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </div>
