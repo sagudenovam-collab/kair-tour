@@ -11,7 +11,7 @@
   --card-foreground: #ffffff;
   --popover: oklch(0.16 0.035 258);
   --popover-foreground: oklch(0.97 0.005 250);
-  --primary: #0049be;
+  --primary: #18315b;
   --primary-foreground: white;
   --primary-glow: rgba(4, 23, 51, 0.25); /* для свечения */
    --text-primary: #f8f9fa; /* основной текст */
