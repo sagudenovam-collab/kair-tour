@@ -53,7 +53,9 @@ function TourCardTiered({
         <div className="flex-1 min-h-[80px] border-t border-white/10 pt-4 mb-6">
           <div className="flex items-start gap-3">
             <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-white" />
-            <p className="text-sm leading-relaxed text-white/70">{t(includedKey)}</p>
+            <p className="text-sm leading-relaxed text-white/70" style={{ whiteSpace: "pre-line" }}>
+    {t(includedKey)}
+  </p>
           </div>
         </div>
 
@@ -107,9 +109,9 @@ function TourCardMultiDay({ image, title, duration, days, included }: any) {
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-4 mt-6 text-[12px] text-white/60 min-h-[100px]">
-           {included}
-        </div>
+        <div className="border-t border-white/10 pt-4 mt-6 text-[12px] text-white/60 min-h-[100px]" style={{ whiteSpace: "pre-line" }}>
+  {included}
+</div>
 
         <div className="mt-6">
           <a href="https://wa.me/77077579993" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-primary/40 px-5 py-3 text-[12px] font-bold uppercase tracking-widest text-white transition-all hover:bg-primary">
@@ -160,6 +162,7 @@ export function ToursSection() {
           <TourCardTiered image="/images/singing-dunes.jpg" titleKey="tour9.title" routeKey="tour9.route" timeKey="tour9.time" includedKey="tour9.included" />
           <TourCardTiered image="/images/aktau.jpeg" titleKey="tour10.title" routeKey="tour10.route" timeKey="tour10.time" includedKey="tour10.included" />
           <TourCardTiered image="/images/issyk-bear.jpg" titleKey="tour11.title" routeKey="tour11.route" timeKey="tour11.time" includedKey="tour11.included" />
+          <TourCardTiered image="/images/Khorgos.jpg" titleKey="tour14.title" routeKey="tour14.route" timeKey="tour14.time" includedKey="tour14.included" />
         </div>
 
         {/* 2. СЕКЦИЯ: ДВУХДНЕВНЫЕ ТУРЫ */}

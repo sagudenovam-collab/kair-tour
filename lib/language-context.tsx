@@ -253,7 +253,7 @@ const translations: Record<string, Record<Lang, string>> = {
   "tour5.title": { en: "Huns Village and Oi-Qaragai", ru: "Аул Гунны и Ой-Карагай" },
   "tour5.route": { en: "Almaty - Huns Ethno Village - Oi-Qaragai Ski Resort - Almaty", ru: "Алматы - Этно-аул Гунны - Ой-Карагай - Алматы" },
   "tour5.time": { en: "09:30 - 19:00", ru: "09:30 - 19:00" },
-  
+  "tour5.included": {en: "Transport with guide, entrance tickets", ru: "Транспорт с гидом, входные билеты",},
 
   "tour6.title": { en: "Big Almaty Lake and Springs", ru: "БАО и Источники" },
   "tour6.route": { en: "Almaty - Big Almaty lake - Almaarasan gorge - Thermal springs - Almaty", ru: "Алматы - БАО - Алма-Арасан - Термальные источники - Алматы" },
@@ -318,6 +318,21 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "English guide, SUV to Kaindy, Horse rental, Tickets, Guesthouse with breakfast", 
     ru: "Англоговорящий гид, внедорожник, аренда лошадей, билеты, гостевой дом с завтраком" 
   },
+  // Tour 14 
+  "tour14.title": { en: "Khorgos", ru: "Хоргос" },
+  "tour14.route": { en: "Almaty Botanical Garden - Big Almaty Lake - Almaty City Park", 
+  ru: "Ботанический сад Алматы - Большое Алматинское озеро - Городской парк Алматы" },
+"tour14.time": { 
+  en: "09:00 - 15:00", 
+  ru: "09:00 - 15:00" 
+},
+"tour14.included": { 
+  en: "• Comfortable transfer from Almaty and back\n• Visit to the Khorgos center and free time for shopping\n       • Huge selection of goods: clothing, technology, accessories, household goods\n• Opportunity to buy high-quality goods at affordable prices\n• Assistance from a guide and escort", 
+  ru: "• Комфортный трансфер из Алматы и обратно\n• Посещение центра Хоргос и свободное время для покупок\n• Огромный выбор товаров: одежда, техника, аксессуары, товары для дома\n• Возможность купить качественные товары по доступным ценам\n• Помощь и сопровождение гида"
+},
+  
+
+
 
   
 
