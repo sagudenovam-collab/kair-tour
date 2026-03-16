@@ -330,6 +330,25 @@ const translations: Record<string, Record<Lang, string>> = {
   en: "• Comfortable transfer from Almaty and back\n• Visit to the Khorgos center and free time for shopping\n       • Huge selection of goods: clothing, technology, accessories, household goods\n• Opportunity to buy high-quality goods at affordable prices\n• Assistance from a guide and escort", 
   ru: "• Комфортный трансфер из Алматы и обратно\n• Посещение центра Хоргос и свободное время для покупок\n• Огромный выбор товаров: одежда, техника, аксессуары, товары для дома\n• Возможность купить качественные товары по доступным ценам\n• Помощь и сопровождение гида"
 },
+"tour15.title": { 
+  en: "Tamgaly Petroglyphs", 
+  ru: "Петроглифы Тамгалы" 
+},
+
+"tour15.route": { 
+  en: "Almaty - Tamgaly Gorge - Bronze Age Petroglyphs - Steppe landscapes - Almaty", 
+  ru: "Алматы - Урочище Тамгалы - Петроглифы бронзового века - Степные пейзажи - Алматы" 
+},
+
+"tour15.time": { 
+  en: "08:00 - 18:00", 
+  ru: "08:00 - 18:00" 
+},
+
+"tour15.included": { 
+  en: "Transportation with English-speaking guide, entrance tickets, eco fees, bottled water", 
+  ru: "Транспорт с англоговорящим гидом, входные билеты, экосборы, питьевая вода" 
+},
   
 
 

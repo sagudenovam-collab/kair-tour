@@ -6,7 +6,7 @@ import { useFadeIn } from "@/hooks/use-fade-in"
 import { useState, useRef } from "react"
 
 /* ------------------------------------------------------------------ */
-/* 1. Универсальная карточка тура (Однодневные и Двухдневные)         */
+/* 1. Универсальная карточка тура (Вертикальная)                      */
 /* ------------------------------------------------------------------ */
 function TourCardTiered({
   image,
@@ -54,16 +54,14 @@ function TourCardTiered({
           <div className="flex items-start gap-3">
             <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-white" />
             <p className="text-sm leading-relaxed text-white/70" style={{ whiteSpace: "pre-line" }}>
-    {t(includedKey)}
-  </p>
+              {t(includedKey)}
+            </p>
           </div>
         </div>
 
         <div className="mt-auto border-t border-white/10 pt-4">
           <div className="flex items-center gap-2 mb-4">
-            {/* Иконка купюры теперь белая */}
             <Banknote className="h-4 w-4 shrink-0 text-white" />
-            {/* Надпись PRICE теперь белая */}
             <span className="text-[11px] font-semibold uppercase tracking-widest text-white">{t("tours.price")}</span>
           </div>
           <a
@@ -82,7 +80,94 @@ function TourCardTiered({
 }
 
 /* ------------------------------------------------------------------ */
-/* 2. Карточка Multi-Day (Пакеты)                                     */
+/* 2. Специальная ШИРОКАЯ карточка (Для Tamgaly)                      */
+/* ------------------------------------------------------------------ */
+function TourCardBanner({
+  image,
+  titleKey,
+  routeKey,
+  timeKey,
+  includedKey,
+}: {
+  image: string
+  titleKey: string
+  routeKey: string
+  timeKey: string
+  includedKey: string
+}) {
+  const { t } = useLanguage()
+  return (
+    <div className="group relative flex flex-col md:flex-row overflow-hidden border border-white/5 bg-[#0e1a2b] transition-all duration-500 hover:border-primary/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+      {/* Изображение слева */}
+      <div className="relative h-44 md:h-auto md:w-1/3 shrink-0 overflow-hidden">
+        <Image
+          src={image || "/images/placeholder.jpg"}
+          alt={t(titleKey)}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a121f]/90 via-transparent to-transparent" />
+        {/* Заголовок для мобилок (поверх фото) */}
+        <h3 className="absolute bottom-4 left-5 font-serif text-xl font-bold text-white md:hidden">
+          {t(titleKey)}
+        </h3>
+      </div>
+      
+      {/* Контент: убраны все min-h чтобы сделать карточку узкой */}
+      <div className="flex flex-1 flex-col p-5 md:p-7 justify-center">
+        {/* Заголовок для десктопа */}
+        <h3 className="hidden md:block mb-4 font-serif text-2xl font-bold text-white leading-tight">
+          {t(titleKey)}
+        </h3>
+
+        <div className="flex flex-col lg:flex-row lg:items-start gap-5 lg:gap-10">
+          {/* Инфо блок 1: Маршрут */}
+          <div className="flex-1 space-y-3">
+            <div className="flex items-start gap-3">
+              <MapPin className="mt-1 h-4 w-4 shrink-0 text-white" />
+              <p className="text-sm leading-snug text-white/70">{t(routeKey)}</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="h-4 w-4 shrink-0 text-white" />
+              <span className="text-sm text-white/60 font-medium">{t(timeKey)}</span>
+            </div>
+          </div>
+
+          {/* Инфо блок 2: Что включено (компактно) */}
+          <div className="flex-1 border-t lg:border-t-0 lg:border-l border-white/10 pt-4 lg:pt-0 lg:pl-8">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-white/50" />
+              <p className="text-[12px] leading-relaxed text-white/60 italic" style={{ whiteSpace: "pre-line" }}>
+                {t(includedKey)}
+              </p>
+            </div>
+          </div>
+
+          {/* Кнопка и цена */}
+          <div className="shrink-0 flex flex-col justify-center gap-3 lg:border-l border-white/10 lg:pl-8">
+            <div className="flex items-center gap-2">
+              <Banknote className="h-4 w-4 shrink-0 text-white" />
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/80">{t("tours.price")}</span>
+            </div>
+            <a
+              href="https://wa.me/77077579993"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-white/5 border border-primary/40 px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest text-white transition-all hover:bg-primary"
+            >
+              {t("tours.book")}
+              <ChevronRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. Карточка Multi-Day (Пакеты)                                     */
 /* ------------------------------------------------------------------ */
 function TourCardMultiDay({ image, title, duration, days, included }: any) {
   const { t } = useLanguage()
@@ -110,8 +195,8 @@ function TourCardMultiDay({ image, title, duration, days, included }: any) {
         </div>
         
         <div className="border-t border-white/10 pt-4 mt-6 text-[12px] text-white/60 min-h-[100px]" style={{ whiteSpace: "pre-line" }}>
-  {included}
-</div>
+          {included}
+        </div>
 
         <div className="mt-6">
           <a href="https://wa.me/77077579993" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-primary/40 px-5 py-3 text-[12px] font-bold uppercase tracking-widest text-white transition-all hover:bg-primary">
@@ -124,7 +209,7 @@ function TourCardMultiDay({ image, title, duration, days, included }: any) {
 }
 
 /* ------------------------------------------------------------------ */
-/* 3. Основная секция                                                 */
+/* 4. Основная секция                                                 */
 /* ------------------------------------------------------------------ */
 export function ToursSection() {
   const { t } = useLanguage();
@@ -163,6 +248,17 @@ export function ToursSection() {
           <TourCardTiered image="/images/aktau.jpeg" titleKey="tour10.title" routeKey="tour10.route" timeKey="tour10.time" includedKey="tour10.included" />
           <TourCardTiered image="/images/issyk-bear.jpg" titleKey="tour11.title" routeKey="tour11.route" timeKey="tour11.time" includedKey="tour11.included" />
           <TourCardTiered image="/images/Khorgos.jpg" titleKey="tour14.title" routeKey="tour14.route" timeKey="tour14.time" includedKey="tour14.included" />
+          
+          {/* ТАМГАЛЫ ПЕТРОГЛИФЫ — ТЕПЕРЬ УЗКИЙ БАННЕР НА ВСЮ ШИРИНУ */}
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3 mt-4">
+            <TourCardBanner 
+              image="/images/Tamgaly Petroglyphs.jpg"
+              titleKey="tour15.title"
+              routeKey="tour15.route"
+              timeKey="tour15.time"
+              includedKey="tour15.included"
+            />
+          </div>
         </div>
 
         {/* 2. СЕКЦИЯ: ДВУХДНЕВНЫЕ ТУРЫ */}
